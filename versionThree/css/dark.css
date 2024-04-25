@@ -1,0 +1,465 @@
+/*general css for all pages*/
+html {
+    min-height: 100%; /*so gradient fits the whole page*/
+}
+
+/*boldershawdowy*/
+h1, h2{
+    font-family: "Oswald", sans-serif;
+    font-size:4em;
+    font-weight: 600;
+    text-shadow: #000000 1px 0 5px;
+}
+/*font easy to read ..more in readme*/
+.oswald{
+    font-family: "Oswald", sans-serif;
+    font-size:1em;
+    font-weight: 300;
+    text-shadow: #000000 1px 0 5px;
+}
+/*without text shadow*/
+.oswald_plain{
+    font-family: "Oswald", sans-serif;
+    font-size:1em;
+    font-weight: 300;
+    text-shadow: none;
+}
+ /*light font*/
+.whiteF{
+    color: white;
+}
+
+/*general bg for all*/
+body{
+    background-image: linear-gradient(#000000, #0FB241);
+    box-sizing: border-box;
+    overflow: scroll;
+}
+
+/*so links dont appear blue and blend in aesthetically*/
+a{
+    text-decoration: none;
+    color: #000000; /*makes the chat icon black*/
+}
+/*to get rid of the buttlet points*/
+ul{
+    list-style: none;
+}
+
+.nav-link{
+    color: white;
+}
+
+nav{
+    background: #FFCF63;
+}
+
+/* Set the border color to the desired color */
+.navbar-toggler {
+	border-color: black;
+}
+
+/*hover effect for interactivity*/
+.btn:hover{
+    box-shadow: inset 1px -2px 3px black;
+}
+
+/*---------------------CSS for enquiry form-----------------------*/
+/*div container holding form inputs*/
+#submitEnquiry{
+    background-image: linear-gradient(to bottom right,#5AC872 10%,#8F5F1F,#9D7E2F, #4FAD63);
+    color: white;
+    position: absolute;
+    bottom: -10%;
+    left: 39%;
+    padding: 1%;
+    width: 20%;
+    border-radius: 25px;
+    border: 1px solid rgb(48, 35, 35);
+    box-shadow: #0b0f13 -2px 1px -10px;
+}
+/*visibility is toggled using buttons+js*/
+#enquiryForm{
+    visibility: hidden;
+}
+/*to make it show less*/
+::placeholder{
+    color: rgba(255, 255, 255, 0.452);
+}
+
+label[for=email], label[for=fName], label[for=lName], label[for=question]{
+    margin-left: 5%;
+}
+#messages_margin{
+    margin-top: 5%;
+    margin-left: 6%;
+}
+
+/*cancel button*/
+.bi-x-circle-fill{
+    font-size: xx-large;
+    position: absolute;
+    right: 4%;
+    margin-top: -1.5%;
+    text-shadow: none;
+}
+
+
+.bi-arrow-right-circle-fill{
+    text-shadow: none;
+}
+
+#messages{
+    height: 40%;
+}
+/*inputs*/
+#fName, #lName{
+    margin-bottom: 10%;
+}
+input{
+    width: 80%;
+    margin-left: 6%;
+    background: none;
+    border: none;
+    border-bottom: solid 1px #3f3f3f;
+}
+
+/*layout of the form as a grid*/
+#form { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+} 
+
+/*position of entire form*/
+.enquiry{
+    width: 60%;
+    height: auto;
+    right: 20%;
+    top: 10%; 
+    z-index: 1; /*brings it to the front so appears infront of all other divs*/
+    position: absolute;
+    background-image: linear-gradient(to bottom right,#5AC872 10%,#8F5F1F,#9D7E2F, #4FAD63);
+    border-radius: 5%;
+    padding: 2%;
+    color: #ffffff;
+    border: 1px solid rgb(48, 35, 35);
+    box-shadow: #0b0f13 1px 1px 10px;
+}
+
+/*---------------------CSS for homepage-----------------------*/
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+}
+
+/*homepage title*/
+#title{
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size:4em;
+    font-weight: 600;
+}
+/*text in hompage container*/
+#homeIntro{
+    position: relative;
+    width: 70%;
+    overflow: hidden;
+    margin-left: 0; /*so it stays left*/
+    margin-left: 2%; 
+    font-size: larger;
+    color: white;
+}
+
+/*div container on homepage*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 3%;
+    padding-left:1%; /**/
+    width: 50%;  
+    padding: 5%;  
+    height: 100%; 
+    border :1px solid black ;
+    box-shadow: #000000 3px 2px 10px;
+    background-image: linear-gradient(to bottom right,#5AC872 10%,#8F5F1F,#9D7E2F, #4FAD63);
+
+}
+
+/*video on homepage*/
+video{
+    box-shadow: #000000 -2px 3px 10px;
+}
+
+#btnBook{
+    margin-left: 2%;
+    margin-top: 4%;
+    background-image: linear-gradient(to bottom right,#FFCF63, #0FB241);
+    color: #ffffff;
+    outline:1px solid rgba(0, 0, 0, 0.377);
+    margin-bottom: 2%;
+}
+
+#whiteFont{
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+.bi-gear-fill ,.bi-person-circle, .bi-box-arrow-in-right, .bi-person-fill{
+    font-size:x-large;
+}
+
+.bi-person-circle{
+    margin-right: 100px;
+    color: white;
+}
+
+.bi-chat-dots-fill{
+    font-size:50px;
+    text-shadow: none;
+}
+
+/*---------------------CSS for login /sign up form-----------------------*/
+#sign-up-container{
+    background-color: rgb(250, 250, 250);
+}
+
+#tab-login{
+    color: black;
+}
+
+#tab-register{
+    color: #000000;
+}
+
+.whiteFont{
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+.fab{
+    color: black; /*icons*/
+}
+
+/*container sizing*/
+#sign-up-container{
+    padding: 0 30px;
+    width: 40%;
+    margin: 2% auto;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+/*submit buttons displayed in the middle*/
+#login-submit, #register-submit{
+    margin: 0 auto;
+    display: block;
+    background-color: black;
+    width: 50%;
+    border:none;
+}
+/*selects the input boxes to be displayed in the middle*/
+label, #loginName, #loginPassword, #registerName, #registerEmail, #registerPassword, #registerConfirmPassword{
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+}
+
+/*fits content so label shows on one line */
+#loginCheckLabel{
+    width: auto;  
+}
+
+.tabs .nav-link {
+    background-color: transparent;
+    border-bottom: 2px solid transparent; /* Initially transparent */
+  }
+  
+  .tabs .nav-link.active {
+    background-color: transparent;
+    border-color: #0b0f13; /* Changes when active */
+    border-radius: 0;
+  }
+
+
+/*---------------------CSS for hotel bookings-----------------------*/
+
+
+
+#format{
+    border-radius: 15px;
+    padding: 5px;
+    background: rgb(227, 233, 233);
+    border:1px solid black;
+    box-shadow: 1px 1px 3px black;
+}
+
+#datepicker1, #datepicker2, #roomNumber, #ticket_date1{
+    border-radius: 15px;
+    padding: 5px;
+    background: rgb(234, 240, 240);
+    border:1px solid black;
+    box-shadow: 1px 1px 4px black;
+    width: 30%;
+    left: 50%;
+    transform: translate(-10%, 10%);
+}
+/**/
+#adult_tickets, #child_tickets{
+    border-radius: 15px;
+    padding: 5px;
+    background: rgb(234, 240, 240);
+    border:1px solid black;
+    box-shadow: 1px 1px 4px black;
+    width: 100%;
+    left: 50%;
+    transform: translate(-10%, 10%);
+}
+
+#roomNumber{
+    width: 30%;
+    left: 50%;
+    transform: translate(-10%, 10%);
+    margin-bottom: 2%; /*leaves space between itself and the confirm booking button*/
+}
+
+#btnArrow{
+    color: #000000;
+    font-size:x-large;
+}
+
+#btnArrow1{
+    border-radius: 15px;
+    font-size:x-large;
+    width: 25%;
+    outline:1px solid rgba(0, 0, 0, 0.616);
+    background-image: linear-gradient(to bottom right,#ff8514, #ecdd53);
+}
+#btnArrow2{
+    border-radius: 15px;
+    font-size:x-large;
+    width: 25%;
+    margin-top: 2%;
+    outline:1px solid rgba(0, 0, 0, 0.616);
+    background-image: linear-gradient(to bottom right,#ff8514, #ecdd53);
+}
+
+#btnArrowIcon{
+    color: rgb(3, 1, 1);
+    text-shadow: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    justify-content: center;
+    align-items: flex-start; /* Align items at the start of the cross axis */
+    margin-top: 3%;
+}
+
+
+/*-----------------CSS for datepicker calendar ----------------------------------*/
+.ui-datepicker {
+    border: 5px double black;
+    border-radius: 15px;
+    padding: 2%;
+    background-image: linear-gradient(to bottom right,#ff8514, #ecdd53);
+}
+/*header background color ,  */
+.ui-datepicker-header {
+    background-color: #8F5F1F; 
+    color: white;  
+}
+
+/*calendar text color */
+.ui-datepicker-calendar {
+    margin: 10px;
+    color: white; 
+}
+
+/*default date background color */
+.ui-datepicker-calendar .ui-state-default {
+    background-color: #acc53d; 
+    border: 1px solid rgba(255, 255, 255, 0.719); /* Changes border color */
+    color: white;
+}
+.ui-datepicker-calendar .ui-state-default:hover {
+    background-color: #9D7E2F; 
+}
+
+/*-----------------CSS for educational visits page ----------------------------------*/
+.leftCard{
+    position: absolute;
+}
+
+
+/*----------------CSS for Profie page------------------------------------------------*/
+.bi-person-check{
+    font-size: xx-large; 
+}
+
+.profileContainer{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    }
+    @media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+    }
+    @media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+    }
+    @media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+    }
+
+    /**/
+
+    #settingForm{
+
+        width: 50%;
+        height: 20%;
+        font-size: x-large;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+
+    .checkbox-lg .form-check-input{
+        top: .8rem;
+        scale: 1.4;
+        margin-right: 0.7rem;
+        }
+
+
+#btnSettings{
+    font-size: xx-large;
+    position: absolute;
+    color: #000000;
+    text-shadow: none;
+    top: 0;
+    right: -7%;
+}
+
+#btnApply{
+    position: absolute;
+    margin-top: 3%;
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 10px;
+    left: 50%;
+    font-size: larger;
+    transform: translate(-50%, -50%);
+}
+       
