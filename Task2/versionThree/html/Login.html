@@ -1,0 +1,308 @@
+<!--Login page-->
+<!--test the js logins more-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <!--logo in title bar-->
+  <link rel="icon" href="https://img.icons8.com/ios-filled/50/madagaskar.png" type="image/icon type">
+  <!--Bootstrap css cdn link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Font Awesome CSS CDN link -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">  
+  <!--custom stylesheet-->
+  <link rel="stylesheet" href="/Task2/versionThree/css/general_style.css">  
+  
+  <!--Bootstrap Icon css cdn-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark oswald_plain">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index1.html">
+            <img src="https://img.icons8.com/ios-filled/50/madagaskar.png" alt="Logo" width="40" height="35" class="d-inline-block align-text-top">
+            RZA
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index1.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about_us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hotel_bookings.html">Hotel Bookings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tickets_booking.html">Book Tickets</a>
+              </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="educational_visits.html">Educational Visits</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="terms_conditions.html">Terms &AMP; Policies</a>
+                </li>
+                    </ul>
+                    
+                    <ul class="navbar-nav d-flex">
+                        
+                        <li class="nav-item dropdown" title="dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="Login.html">
+                                <i class="bi bi-person-circle" title="login"></i>
+                            </a>
+                    <!-- Dropdown menu -->
+                    <ul class="dropdown-menu">
+                        
+                        <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person-fill"></i> Profile</a></li>
+                        
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Login.html"><i class="bi bi-box-arrow-in-right"></i> Sign In</a></li> <!--sya sign in, and says sign out when sign in is toggled, funcion> alert signed out-->
+                        <li class="dropdown-item" ><a><i class="bi bi-gear-fill" onclick="openSettings()"></i> Settings</a></li> <!--accessibility option toggle dropdown? cant redirect-->
+                        <!----> 
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div id="sign-up-container">
+    <!-- Pills navs -->
+  <ul class="nav nav-pills nav-justified mb-3 oswald_plain" id="ex1" role="tablist">
+    <li class="nav-item tabs" role="presentation">
+      <a class="nav-link active" id="tab-login" data-mdb-toggle="pill" href="#pills-login" role="tab"
+        aria-controls="pills-login" aria-selected="true">Login</a>
+    </li>
+    <li class="nav-item tabs" role="presentation">
+      <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="#pills-register" role="tab"
+        aria-controls="pills-register" aria-selected="false">Register</a>
+    </li>
+  </ul>
+
+  <!-- Pills content -->
+  <div class="tab-content oswald_plain">
+    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+      <form>
+        <div class="text-center mb-3">
+          <p>Sign in with:</p>
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-facebook-f" title="facebook"></i>
+          </button>
+
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-google" title="google"></i>
+          </button>
+
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-twitter" title="twitter"></i>
+          </button>
+
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-github" title="github"></i>
+          </button>
+        </div>
+
+        <p class="text-center">or:</p>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="loginName">Email or username</label>
+          <input type="email" id="loginName" class="form-control" required/>  
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" class="form-control" required/>  
+        </div>
+
+        <!-- 2 column grid layout -->
+        <div class="row mb-4">
+          <!-- Checkbox -->
+          <div class="d-flex justify-content-center">
+            <div class="form-check mb-3 mb-md-0">
+              <label style="display: inline-block" class="form-check-label" id="loginCheckLabel"> 
+                <input class="form-check-input" style="vertical-align: middle" type="checkbox" id="loginCheck" checked required/> 
+                <span style="vertical-align: middle">Remember me</span> 
+              </label>
+            </div>
+          </div>
+        
+          <!-- Simple link -->
+          <div class="d-flex justify-content-center">
+            <div class="text-center">
+              <a href="#!">Forgot password?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" id="login-submit" class="btn btn-primary mx-auto d-block mb-3">Sign in</button>
+
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>Not a member? <a href="#" >Register</a></p><!--switch tabs from here-->
+        </div>
+      </form>
+    </div>
+
+
+    <div class="tab-pane fade oswald_plain" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+      <form id="registerForm" action="login.php" method="post"> <!--main php file-->
+        <div class="text-center mb-3">
+          <p>Register with:</p>
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-facebook-f" title="facebook"></i>
+          </button>
+
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-google" title="google"></i>
+          </button>
+
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-twitter" title="twitter"></i>
+          </button>
+
+          <button type="button" class="btn btn-link btn-floating mx-1">
+            <i class="fab fa-github" title="github"></i>
+          </button>
+        </div>
+
+        <p class="text-center">or:</p>
+
+        <!-- Name input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="registerName">Name</label>
+          <input type="text" name="registerName" id="registerName" class="form-control" required />          
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="registerEmail">Email</label>
+          <input type="email" name="registerEmail" id="registerEmail" class="form-control" required />          
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="registerPassword">Password</label>
+          <input type="password" name="registerPassword" id="registerPassword" class="form-control" required />          
+        </div>
+
+        <!-- Repeat Password input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="registerConfirmPassword">Confirm password</label>
+          <input type="password" name="registerConfirmPassword" id="registerConfirmPassword" class="form-control" required />          
+        </div>
+
+        <!-- Checkbox -->
+        <div class="form-check d-flex justify-content-center mb-4">
+          <label class="form-check-label" style="display: inline-block"> 
+            <input class="form-check-input" style="vertical-align: middle"
+                        type="checkbox" id="registerCheck" checked/> 
+            <span style="vertical-align: middle"> 
+              I have read and agreed to the <a href="terms_conditions.html">terms and conditions</a> <!--change wording-->
+            </span> 
+        </label> 
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" id="register-submit" class="btn btn-primary btn-block mb-3">Sign in</button>
+      </form>
+    </div>
+  </div>
+<!-- Pills content -->
+</div>
+
+
+<a href="#" onclick="openForm()"><i class="bi bi-chat-dots-fill d-flex justify-content-end me-4 mb-3 fixed-bottom" title="Enquiry Form"></i></a><!--enquiry subtext link to enquiry form bottom right corner on every page, subtext on hover???-->
+    <div class="bg-light enquiry oswald" id="enquiryForm"> 
+        <a href="#" onclick="closeForm()"><i class="bi bi-x-circle-fill"></i></a>
+        <h1 align="center">ENQUIRY FORM</h1>
+        <form id="form" action="enquiryForm.php" method="post">
+          <label for="fName">First name*</label>
+          
+          <label for="lName">Last name</label>
+          <input id="fName" name="fName" type="text" placeholder="Enter first name">
+          <input id="lName" name="lName" type="text" placeholder="Enter last name">
+          <label for="email">Email address*</label>
+          
+          <label for="question">What are you enquiring about?</label>
+          <input id="email" name="email" type="text" placeholder="enter email address">
+          <input id="question" name="question" type="text" >  
+
+          <button onclick="submitted()" class="btn" name="submitEnquiry" id="submitEnquiry" type="submit" role="button">Submit</button>           
+      </form>
+        <label id="messages_margin" for="messages">Description of problem:</label>
+        <input type="text" id="messages" placeholder="Type your message here">
+    </div>
+
+
+    <!--settings form for accessibility-->
+    <div id="settingForm" class="bg-light oswald_plain">
+      <form id="settings" action="">                        
+          <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Themes
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <div class="form-check">
+                          <input type="radio" class="form-check-input" id="lightMode" value="light">Light Mode
+                          <label class="form-check-label" for="lightMode"></label>
+                        </div>
+                        <div class="form-check">
+                          <input type="radio" class="form-check-input" id="darkMode" value="dark">Dark Mode
+                          <label class="form-check-label" for="darkMode"></label>
+                        </div>
+                      </div>
+                </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Accessibility
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <div class="checkbox-lg">
+                          <input class="form-check-input large" type="checkbox" value="" id="flexCheckChecked">
+                          <label class="form-check-label" for="flexCheckChecked">
+                              Captions
+                          </label>
+      
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      <label class="form-check-label" for="flexCheckChecked">
+                          Screen Reader
+                      </label>
+                   </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit" onclick="One()" id="btnApply">Apply Settings</button>
+      </form>
+      <a href="#" onclick="closeSettings()" title="Cancel"><i class="bi bi-x-circle-fill" id="btnSettings"></i></a>
+  </div>
+  
+
+ <!-- Bootstrap js cdn link -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+ <!--custom js-->
+ <script src="/Task2/versionThree/js/script.js"></script>
+ 
+  
+</body>
+</html>

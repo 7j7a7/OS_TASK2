@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"> 
+    
+    <!--Bootstrap css cdn--> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--Bootstrap for jQuery UI widgets-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"/>
+    <title>Hotel Bookings</title>  
+    <!--logo in title bar-->
+    <link rel="icon" href="https://img.icons8.com/ios-filled/50/madagaskar.png" type="image/icon type">
+    <!--custom stylesheet-->
+    <link rel="stylesheet" href="/Task2/versionThree/css/general_style.css">  
+    <!--Bootstrap Icon css cdn-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg oswald_plain">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://img.icons8.com/ios-filled/50/madagaskar.png" alt="Logo" width="40" height="35" class="d-inline-block align-text-top">
+                RZA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index1.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotel_bookings.html">Hotel Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tickets_booking.html">Book Tickets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="educational_visits.html">Educational Visits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="terms_conditions.html">Terms &AMP; Policies</a>
+                    </li>
+                        </ul>
+                        
+                        <ul class="navbar-nav d-flex" title="dropdown">
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="Login.html">
+                                    <i class="bi bi-person-circle" title="login"></i>
+                                </a>
+                        <!-- Dropdown menu -->
+                        <ul class="dropdown-menu">
+                            
+                            <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person-fill"></i> Profile</a></li>
+                            
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="Login.html"><i class="bi bi-box-arrow-in-right"></i> Sign In</a></li> <!--sya sign in, and says sign out when sign in is toggled, funcion> alert signed out-->
+                            <li class="dropdown-item" ><a><i class="bi bi-gear-fill" onclick="openSettings()"></i> Settings</a></li> <!--accessibility option toggle dropdown? cant redirect-->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid oswald">
+        <h1 align="center" class="mb-3 mt-3 whiteF">BOOK TICKETS</h1>
+        <h5 align="center" class="mb-4 mt-3 whiteF">Select date</h5>
+        <div class="row">
+            <div class="col-sm-12" align="center">
+                <form action="/Task2/versionThree/html/bookings.php" method="post">
+                    <p class="whiteF">Format options:
+                        <select id="format">
+                            <option value="mm/dd/yy">Default: mm/dd/yy</option>
+                            <option value="d MM, yy">Medium: d MM, y</option>
+                            <option value="DD, d MM, yy">Full: DD, d MM, yy</option>
+                        </select>
+                    </p>
+    
+                    <!---->
+                    <p class="whiteF">Date:<br><input type="text" id="ticket_date1" size="30" style="margin-right:15px;"></p>
+                    <!---->
+                    <p class="whiteF">Tickets valid for one day.</p>
+                    <br>
+                    <h3 class="whiteF">Tickets:</h3>
+                    <div class="form-check form-check-inline whiteF">
+                      <label for="adult_tickets" class="whiteF">Adult Tickets</label>
+                      <input type="number" id="adult_tickets" min="0">
+                      <p></p>
+                      <label for="child_tickets" class="whiteF">Child Tickets</label>
+                      <input type="number" id="child_tickets" min="0">
+                      </div>
+                      <p></p>
+                      <button type="submit" class="btn whiteFont" id="btnArrow2">Confirm Booking <i class="bi bi-arrow-right-circle-fill" id="btnArrowIcon"></i></button>
+                </form>
+                 
+            </div>               
+        </div>
+        <!--articles displayed-->
+        <!-- <div class="container-fluid container">
+            <div class="row">
+                <div class="article col-sm"><img src="/Task2/versionThree/images/image1.jpeg" alt="#" width="200px"></div>
+                <div class="article col-sm"><img src="/Task2/versionThree/images/image2.jpeg" alt="#" width="200px"></div>
+                <div class="article col-sm"><img src="/Task2/versionThree/images/image3.jpeg" alt="#" width="200px"></div>
+            </div>
+        </div> -->
+    </div>
+
+
+
+
+    <a href="#" onclick="openForm()"><i class="bi bi-chat-dots-fill d-flex justify-content-end me-4 mb-3 fixed-bottom" title="Enquiry Form"></i></a><!--enquiry subtext link to enquiry form bottom right corner on every page, subtext on hover???-->
+    <div class="bg-light enquiry oswald" id="enquiryForm"> 
+        <a href="#" onclick="closeForm()"><i class="bi bi-x-circle-fill"></i></a>
+        <h1 align="center">ENQUIRY FORM</h1>
+        <form id="form" action="enquiryForm.php" method="post">
+            <label for="fName">First name*</label>
+            
+            <label for="lName">Last name</label>
+            <input id="fName" name="fName" type="text" placeholder="Enter first name">
+            <input id="lName" name="lName" type="text" placeholder="Enter last name">
+            <label for="email">Email address*</label>
+            
+            <label for="question">What are you enquiring about?</label>
+            <input id="email" name="email" type="text" placeholder="enter email address">
+            <input id="question" name="question" type="text" >  
+
+            <button onclick="submitted()" class="btn" name="submitEnquiry" id="submitEnquiry" type="submit" role="button">Submit</button>           
+        </form>
+        <label id="messages_margin" for="messages">Description of problem:</label>
+        <input type="text" id="messages" placeholder="Type your message here">
+    </div>  
+
+<!--settings form for accessibility-->
+<div id="settingForm" class="bg-light oswald_plain">
+    <form id="settings" action="">                        
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Themes
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="lightMode" value="light">Light Mode
+                        <label class="form-check-label" for="lightMode"></label>
+                      </div>
+                      <div class="form-check">
+                        <input type="radio" class="form-check-input" id="darkMode" value="dark">Dark Mode
+                        <label class="form-check-label" for="darkMode"></label>
+                      </div>
+                    </div>
+              </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Accessibility
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="checkbox-lg">
+                        <input class="form-check-input large" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Captions
+                        </label>
+    
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Screen Reader
+                    </label>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit" onclick="One()" id="btnApply">Apply Settings</button>
+    </form>
+    <a href="#" onclick="closeSettings()" title="Cancel"><i class="bi bi-x-circle-fill" id="btnSettings"></i></a>
+</div>
+
+    
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+    <!--datepicker javascript for calendar (page specific)-->
+    <script src="/Task2/versionThree/js/bookings.js"></script> <!--before end-->
+    <!--custom general js-->
+    <script src="/Task2/versionThree/js/script.js"></script>
+
+</body>  
+</html>
+
+
+<!--payment-->

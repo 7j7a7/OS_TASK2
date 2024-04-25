@@ -1,0 +1,32 @@
+<!--Accessibility page-->
+
+<!--drop down within drop downs
+    (visual aid(font size,font type, alt text(unhide)), 
+    hearing aid (screen reader), 
+    other(light/dark themes))-->
+
+    <a href="#" onclick="openForm()"><i class="bi bi-chat-dots-fill d-flex justify-content-end me-4 mb-3 fixed-bottom" title="Enquiry Form"></i></a><!--enquiry subtext link to enquiry form bottom right corner on every page, subtext on hover???-->
+    <div class="bg-light enquiry" id="enquiryForm"> 
+        <a href="#" onclick="closeForm()"><i class="bi bi-x-circle-fill"></i></a>
+        <h1 align="center">ENQUIRY FORM</h1>
+        <form id="form" action="">
+            <label for="fName">First name*</label>
+            
+            <label for="lName">Last name</label>
+            <input id="fName" type="text" placeholder="Enter first name">
+            <input id="lName" type="text" placeholder="Enter last name">
+            <label for="email">Email address*</label>
+            
+            <label for="question">What are you enquiring about?</label>
+            <input id="email" type="text" placeholder="enter email address">
+            <input id="question" type="text" >  
+
+            <button onclick="submitted" class="btn" id="submitEnquiry" type="submit" role="button">Submit</button> 
+                        
+        </form>
+        <label id="messages_margin" for="messages">Additional messages</label>
+        <input type="text" id="messages" placeholder="Type your message here">
+    </div>
+
+    <!--custom js-->
+    <script src="/Task_2-main/Task2/versionOne/js/script.js"></script>
